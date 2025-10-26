@@ -1,0 +1,68 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.carousel {
+  position: relative;
+  max-width: 1200px;
+  margin: 50px auto;
+  overflow: hidden;
+}
+
+.carousel-inner {
+  display: flex;
+  gap: 30px;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-inner img {
+  flex: 0 0 auto;
+  height: 300px;
+  object-fit: cover;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+button:hover {
+  background: rgba(0, 0, 0, 0.8);
+}
+
+/* Responsive image width based on viewport */
+@media (max-width: 600px) {
+  .carousel-inner img {
+    width: 100%;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .carousel-inner img {
+    width: 33.33%; /* Show 3 images */
+  }
+}
+
+@media (min-width: 901px) {
+  .carousel-inner img {
+    width: 20%; /* Show 5 images */
+  }
+}
